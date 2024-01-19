@@ -87,7 +87,7 @@ def handle_userinput(user_question):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Chat with multiple files",
+    st.set_page_config(page_title="Chat with Documents",
                        page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
@@ -96,7 +96,7 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Chat with multiple files :books:")
+    st.header("Chat with Documents :books:")
     user_question = st.text_input("Ask a question about your documents:")
     
     with st.sidebar:
